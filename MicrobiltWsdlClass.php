@@ -8,7 +8,7 @@
  */
 /**
  * MicrobiltWsdlClass to communicate with SOAP service
- * 
+ *
  * @package Microbilt
  * @author WsdlToPhp Team <contact@wsdltophp.com>
  * @version 20150429-01
@@ -218,7 +218,7 @@ class MicrobiltWsdlClass extends stdClass implements ArrayAccess,Iterator,Counta
      * @param string $_className optional (used by inherited classes in order to always call this method)
      * @return MicrobiltWsdlClass|null
      */
-    public static function __set_state(array $_array,$_className = __CLASS__)
+    public static function magick_set_state(array $_array,$_className = __CLASS__)
     {
         if(class_exists($_className))
         {
