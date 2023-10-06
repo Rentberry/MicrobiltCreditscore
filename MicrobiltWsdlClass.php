@@ -632,7 +632,7 @@ class MicrobiltWsdlClass extends stdClass implements ArrayAccess,Iterator,Counta
      * @uses MicrobiltWsdlClass::offsetExists()
      * @return bool true|false
      */
-    public function valid()
+    public function valid(): bool
     {
         return $this->offsetExists($this->getInternArrayToIterateOffset());
     }
