@@ -20,59 +20,59 @@ class MicrobiltWsdlClass extends stdClass implements ArrayAccess,Iterator,Counta
      * Option key to define WSDL url
      * @var string
      */
-    const WSDL_URL = 'wsdl_url';
+    public const WSDL_URL = 'wsdl_url';
     /**
      * Constant to define the default WSDL URI
      * @var string
      */
-    const VALUE_WSDL_URL = 'https://creditserver.microbilt.com/WebServices/Ex/ExStd.svc?wsdl';
+    public const VALUE_WSDL_URL = 'https://creditserver.microbilt.com/WebServices/Ex/ExStd.svc?wsdl';
     /**
      * Option key to define WSDL login
      * @var string
      */
-    const WSDL_LOGIN = 'wsdl_login';
+    public const WSDL_LOGIN = 'wsdl_login';
     /**
      * Option key to define WSDL password
      * @deprecated use WSDL_PASSWORD instead
      * @var string
      */
-    const WSDL_PASSWD = 'wsdl_password';
+    public const WSDL_PASSWD = 'wsdl_password';
     /**
      * Option key to define WSDL password
      * @var string
      */
-    const WSDL_PASSWORD = 'wsdl_password';
+    public const WSDL_PASSWORD = 'wsdl_password';
     /**
      * Option key to define WSDL trace option
      * @var string
      */
-    const WSDL_TRACE = 'wsdl_trace';
+    public const WSDL_TRACE = 'wsdl_trace';
     /**
      * Option key to define WSDL exceptions
      * @deprecated use WSDL_EXCEPTIONS instead
      * @var string
      */
-    const WSDL_EXCPTS = 'wsdl_exceptions';
+    public const WSDL_EXCPTS = 'wsdl_exceptions';
     /**
      * Option key to define WSDL exceptions
      * @var string
      */
-    const WSDL_EXCEPTIONS = 'wsdl_exceptions';
+    public const WSDL_EXCEPTIONS = 'wsdl_exceptions';
     /**
      * Option key to define WSDL cache_wsdl
      * @var string
      */
-    const WSDL_CACHE_WSDL = 'wsdl_cache_wsdl';
+    public const WSDL_CACHE_WSDL = 'wsdl_cache_wsdl';
     /**
      * Option key to define WSDL stream_context
      * @var string
      */
-    const WSDL_STREAM_CONTEXT = 'wsdl_stream_context';
+    public const WSDL_STREAM_CONTEXT = 'wsdl_stream_context';
     /**
      * Option key to define WSDL soap_version
      * @var string
      */
-    const WSDL_SOAP_VERSION = 'wsdl_soap_version';
+    public const WSDL_SOAP_VERSION = 'wsdl_soap_version';
     /**
      * Option key to define WSDL compression
      * @var string
@@ -82,72 +82,72 @@ class MicrobiltWsdlClass extends stdClass implements ArrayAccess,Iterator,Counta
      * Option key to define WSDL encoding
      * @var string
      */
-    const WSDL_ENCODING = 'wsdl_encoding';
+    public const WSDL_ENCODING = 'wsdl_encoding';
     /**
      * Option key to define WSDL connection_timeout
      * @var string
      */
-    const WSDL_CONNECTION_TIMEOUT = 'wsdl_connection_timeout';
+    public const WSDL_CONNECTION_TIMEOUT = 'wsdl_connection_timeout';
     /**
      * Option key to define WSDL typemap
      * @var string
      */
-    const WSDL_TYPEMAP = 'wsdl_typemap';
+    public const WSDL_TYPEMAP = 'wsdl_typemap';
     /**
      * Option key to define WSDL user_agent
      * @var string
      */
-    const WSDL_USER_AGENT = 'wsdl_user_agent';
+    public const WSDL_USER_AGENT = 'wsdl_user_agent';
     /**
      * Option key to define WSDL features
      * @var string
      */
-    const WSDL_FEATURES = 'wsdl_features';
+    public const WSDL_FEATURES = 'wsdl_features';
     /**
      * Option key to define WSDL keep_alive
      * @var string
      */
-    const WSDL_KEEP_ALIVE = 'wsdl_keep_alive';
+    public const WSDL_KEEP_ALIVE = 'wsdl_keep_alive';
     /**
      * Option key to define WSDL proxy_host
      * @var string
      */
-    const WSDL_PROXY_HOST = 'wsdl_proxy_host';
+    public const WSDL_PROXY_HOST = 'wsdl_proxy_host';
     /**
      * Option key to define WSDL proxy_port
      * @var string
      */
-    const WSDL_PROXY_PORT = 'wsdl_proxy_port';
+    public const WSDL_PROXY_PORT = 'wsdl_proxy_port';
     /**
      * Option key to define WSDL proxy_login
      * @var string
      */
-    const WSDL_PROXY_LOGIN = 'wsdl_proxy_login';
+    public const WSDL_PROXY_LOGIN = 'wsdl_proxy_login';
     /**
      * Option key to define WSDL proxy_password
      * @var string
      */
-    const WSDL_PROXY_PASSWORD = 'wsdl_proxy_password';
+    public const WSDL_PROXY_PASSWORD = 'wsdl_proxy_password';
     /**
      * Option key to define WSDL local_cert
      * @var string
      */
-    const WSDL_LOCAL_CERT = 'wsdl_local_cert';
+    public const WSDL_LOCAL_CERT = 'wsdl_local_cert';
     /**
      * Option key to define WSDL passphrase
      * @var string
      */
-    const WSDL_PASSPHRASE = 'wsdl_passphrase';
+    public const WSDL_PASSPHRASE = 'wsdl_passphrase';
     /**
      * Option key to define WSDL authentication
      * @var string
      */
-    const WSDL_AUTHENTICATION = 'wsdl_authentication';
+    public const WSDL_AUTHENTICATION = 'wsdl_authentication';
     /**
      * Option key to define WSDL ssl_method
      * @var string
      */
-    const WSDL_SSL_METHOD = 'wsdl_ssl_method';
+    public const WSDL_SSL_METHOD = 'wsdl_ssl_method';
     /**
      * Soapclient called to communicate with the actual SOAP Service
      * @var SoapClient
@@ -180,23 +180,24 @@ class MicrobiltWsdlClass extends stdClass implements ArrayAccess,Iterator,Counta
     private $internArrayToIterateOffset;
     /**
      * Constructor
-     * @uses MicrobiltWsdlClass::setLastError()
-     * @uses MicrobiltWsdlClass::initSoapClient()
-     * @uses MicrobiltWsdlClass::initInternArrayToIterate()
-     * @uses MicrobiltWsdlClass::_set()
      * @param array $_arrayOfValues SoapClient options or object attribute values
      * @param bool $_resetSoapClient allows to disable the SoapClient redefinition
      * @return MicrobiltWsdlClass
+     *@uses MicrobiltWsdlClass::_set()
+     * @uses MicrobiltWsdlClass::setLastError()
+     * @uses MicrobiltWsdlClass::initSoapClient()
+     * @uses MicrobiltWsdlClass::initInternArrayToIterate()
      */
-    public function __construct($_arrayOfValues = array(),$_resetSoapClient = true)
+    public function __construct(array $_arrayOfValues = array(), bool $_resetSoapClient = true)
     {
         $this->setLastError(array());
         /**
          * Init soap Client
          * Set default values
          */
-        if($_resetSoapClient)
+        if ($_resetSoapClient) {
             $this->initSoapClient($_arrayOfValues);
+        }
         /**
          * Init array of values if set
          */
@@ -206,8 +207,9 @@ class MicrobiltWsdlClass extends stdClass implements ArrayAccess,Iterator,Counta
          */
         if(is_array($_arrayOfValues) && count($_arrayOfValues))
         {
-            foreach($_arrayOfValues as $name=>$value)
-                $this->_set($name,$value);
+            foreach ($_arrayOfValues as $name=>$value) {
+                $this->_set($name, $value);
+            }
         }
     }
     /**
@@ -594,7 +596,7 @@ class MicrobiltWsdlClass extends stdClass implements ArrayAccess,Iterator,Counta
      * @uses MicrobiltWsdlClass::getInternArrayToIterateIsArray()
      * @return int
      */
-    public function count()
+    public function count(): int
     {
         return $this->getInternArrayToIterateIsArray()?count($this->getInternArrayToIterate()):-1;
     }
@@ -603,7 +605,7 @@ class MicrobiltWsdlClass extends stdClass implements ArrayAccess,Iterator,Counta
      * @uses MicrobiltWsdlClass::offsetGet()
      * @return mixed
      */
-    public function current()
+    public function current(): mixed
     {
         return $this->offsetGet($this->internArrayToIterateOffset);
     }
@@ -613,7 +615,7 @@ class MicrobiltWsdlClass extends stdClass implements ArrayAccess,Iterator,Counta
      * @uses MicrobiltWsdlClass::setInternArrayToIterateOffset()
      * @return int
      */
-    public function next()
+    #[ReturnTypeWillChange] public function next()
     {
         return $this->setInternArrayToIterateOffset($this->getInternArrayToIterateOffset() + 1);
     }
@@ -622,7 +624,7 @@ class MicrobiltWsdlClass extends stdClass implements ArrayAccess,Iterator,Counta
      * @uses MicrobiltWsdlClass::setInternArrayToIterateOffset()
      * @return int
      */
-    public function rewind()
+    #[ReturnTypeWillChange] public function rewind()
     {
         return $this->setInternArrayToIterateOffset(0);
     }
@@ -641,7 +643,7 @@ class MicrobiltWsdlClass extends stdClass implements ArrayAccess,Iterator,Counta
      * @uses MicrobiltWsdlClass::getInternArrayToIterateOffset()
      * @return int
      */
-    public function key()
+    public function key(): mixed
     {
         return $this->getInternArrayToIterateOffset();
     }
@@ -730,7 +732,7 @@ class MicrobiltWsdlClass extends stdClass implements ArrayAccess,Iterator,Counta
      * @param int $_offset
      * @return bool true|false
      */
-    public function offsetExists($_offset)
+    public function offsetExists($_offset): bool
     {
         return ($this->getInternArrayToIterateIsArray() && array_key_exists($_offset,$this->getInternArrayToIterate()));
     }
@@ -740,7 +742,7 @@ class MicrobiltWsdlClass extends stdClass implements ArrayAccess,Iterator,Counta
      * @param int $_offset
      * @return mixed
      */
-    public function offsetGet($_offset)
+    public function offsetGet($_offset): mixed
     {
         return $this->offsetExists($_offset)?$this->internArrayToIterate[$_offset]:null;
     }
@@ -750,18 +752,17 @@ class MicrobiltWsdlClass extends stdClass implements ArrayAccess,Iterator,Counta
      * @param mixed $_value
      * @return null
      */
-    public function offsetSet($_offset,$_value)
+    public function offsetSet($_offset,$_value): mixed
     {
         return null;
     }
     /**
      * Method useless but necessarly overridden, can't unset
      * @param mixed $_offset
-     * @return null
      */
-    public function offsetUnset($_offset)
+    public function offsetUnset($_offset): void
     {
-        return null;
+        return;
     }
     /**
      * Method returning current result from Soap call
