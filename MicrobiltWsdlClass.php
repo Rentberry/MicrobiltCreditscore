@@ -732,7 +732,7 @@ class MicrobiltWsdlClass extends stdClass implements ArrayAccess,Iterator,Counta
      * @param int $_offset
      * @return bool true|false
      */
-    public function offsetExists($_offset): bool
+    public function offsetExists(mixed $_offset): bool
     {
         return ($this->getInternArrayToIterateIsArray() && array_key_exists($_offset,$this->getInternArrayToIterate()));
     }
@@ -742,7 +742,7 @@ class MicrobiltWsdlClass extends stdClass implements ArrayAccess,Iterator,Counta
      * @param int $_offset
      * @return mixed
      */
-    public function offsetGet($_offset): mixed
+    public function offsetGet(mixed $_offset): mixed
     {
         return $this->offsetExists($_offset)?$this->internArrayToIterate[$_offset]:null;
     }
@@ -750,17 +750,16 @@ class MicrobiltWsdlClass extends stdClass implements ArrayAccess,Iterator,Counta
      * Method useless but necessarly overridden, can't set
      * @param mixed $_offset
      * @param mixed $_value
-     * @return null
      */
-    public function offsetSet($_offset,$_value): mixed
+    public function offsetSet(mixed $_offset,mixed $_value): void
     {
-        return null;
+        return;
     }
     /**
      * Method useless but necessarly overridden, can't unset
      * @param mixed $_offset
      */
-    public function offsetUnset($_offset): void
+    public function offsetUnset(mixed $_offset): void
     {
         return;
     }
